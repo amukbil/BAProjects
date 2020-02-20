@@ -1,4 +1,2 @@
-# BAProjects
-Student bachelor project SS2020
-
-* [Simulator](https://github.com/amukbil/BAProjects/tree/simulator) basic simulator
+# Simulator in Spring Boot
+expreses the idea of the simulator implemented in spring boot. The container will be deployed to heroku
