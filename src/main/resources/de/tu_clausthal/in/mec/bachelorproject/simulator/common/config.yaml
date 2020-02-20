@@ -1,0 +1,6 @@
+simulation:
+  timestep: 10
+
+grid:
+  rows: 100
+  columns: 150
