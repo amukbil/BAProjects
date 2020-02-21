@@ -68,30 +68,30 @@ public class CConfiguration
     /**
      * returns single config element
      *
-     * @param p_path element path (nodes)
+     * @param p_key element path (nodes)
      *
      * @return desired config
      */
-    public Object get( String... p_path )
+    public Object get( String... p_key )
     {
-        return nested( m_configuration, p_path );
+        return nested( m_configuration, p_key );
     }
 
     /**
      * extract nested nodes
      *
-     * @param p_map  configuration map
-     * @param p_path element path (nodes)
+     * @param p_configmap  configuration map
+     * @param p_key element path (nodes)
      *
      * @return configuration object
      */
     @SuppressWarnings("unchecked")
-    private Object nested( final Map< String, Object > p_map, final String... p_path )
+    private Object nested( final Map< String, Object > p_configmap, final String... p_key )
     {
-        if ( ( p_path == null ) || ( p_path.length == 0 ) )
+        if ( ( p_key == null ) || ( p_key.length == 0 ) )
             throw new RuntimeException( "path is not correct" );
 
-        final Object l_data = p_map.get( p_path[0] );
-        return ( p_path.length == 1 ) || ( l_data == null ) ? l_data : nested( ( Map< String, Object > ) l_data, p_path[1] );
+        final Object l_value = p_configmap.get( p_key[0] );
+        return ( p_key.length == 1 ) || ( l_value == null ) ? l_value : nested( ( Map< String, Object > ) l_value, p_key[1] );
     }
 }
