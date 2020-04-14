@@ -1,2 +1,2 @@
 # Basic Simulator
-expreses the idea of the simulator
+expresses the idea of the simulator
